@@ -12,8 +12,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:GitHubPage": "npm run build && shx rm -rf docs && shx mkdir docs && shx cp -r build/* docs/",
-    "deploy:GitHubPage": "npm run build:GitHubPage && git add docs && git commit -m \"Deploy docs\" && git push"
+    "build:GitHubPage": "npm run build && shx rm -rf docs && shx mkdir docs && shx cp -r build/* docs/"
   },
   "eslintConfig": {
     "extends": [
