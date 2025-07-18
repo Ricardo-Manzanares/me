@@ -36,7 +36,7 @@ jobs:
           password: ${{ secrets.EMAIL_PASSWORD }}
           
           # Email configuration
-          subject: "New Contact Form Submission from Portfolio"
+          subject: "New Contact from Portfolio"
           to: ${{ secrets.RECIPIENT_EMAIL }}
           from: ${{ secrets.EMAIL_USERNAME }}
           
@@ -57,7 +57,7 @@ jobs:
             <body>
                 <div class="container">
                     <div class="header">
-                        <h2>🌟 New Contact Form Submission</h2>
+                        <h2>🌟 New Contact from portfolio</h2>
                         <p>Someone has reached out through your portfolio website!</p>
                     </div>
                     
