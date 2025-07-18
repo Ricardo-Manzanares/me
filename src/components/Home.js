@@ -115,7 +115,10 @@ const Home = () => {
               <div 
                 key={index}
                 className={`flex-none w-full sm:w-1/2 md:w-1/3 px-3 snap-start transition-opacity duration-300 
-                  ${ activeIndex === index ? 'opacity-100' : Math.abs(activeIndex - index) === 1 ? 'opacity-30' : 'opacity-30'}
+                  ${activeIndex === index 
+                    ? 'opacity-100' 
+                    : 'opacity-100 sm:opacity-30 md:opacity-30'
+                  }
                 `}
               >
                 {/* Card content remains the same */}
