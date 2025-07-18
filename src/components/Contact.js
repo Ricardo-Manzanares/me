@@ -30,11 +30,6 @@ const Contact = () => (
                 </div>
             </form>
         </div>
-
-        <div className="text-center mt-12">
-            <p className="text-gray-400">Or reach me via email:</p>
-            <a href="mailto:hello@nafis.com" className="text-lg text-blue-400 hover:underline">hello@nafis.com</a>
-        </div>
     </div>
 );
 
