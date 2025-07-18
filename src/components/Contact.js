@@ -25,7 +25,7 @@ const Contact = () => {
 
         try {
             // Trigger GitHub Actions workflow via repository dispatch
-            const response = await fetch('https://us-central1-process-async.cloudfunctions.net/contactPortfolio', {
+            const response = await fetch('https://contactportfolio-mfl6bakrea-uc.a.run.app', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
