@@ -25,11 +25,9 @@ const Contact = () => {
 
         try {
             // Trigger GitHub Actions workflow via repository dispatch
-            const response = await fetch('https://api.github.com/repos/ricardo-manzanares/ricardo-manzanares.github.io/dispatches', {
+            const response = await fetch('https://us-central1-process-async.cloudfunctions.net/contactPortfolio', {
                 method: 'POST',
                 headers: {
-                    'Accept': 'application/vnd.github.v3+json',
-                    'Authorization': `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
@@ -37,8 +35,7 @@ const Contact = () => {
                     client_payload: {
                         name: formData.name,
                         email: formData.email,
-                        message: formData.message,
-                        timestamp: new Date().toISOString()
+                        userRequest: formData.message
                     }
                 })
             });
