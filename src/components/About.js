@@ -79,7 +79,7 @@ const About = () => {
           <div className="md:col-span-2">
               <img 
                   src={config.imageProfile} 
-                  alt="Retrato de Nafis" 
+                  alt="Retrato de Ricardo Manzanares Camargo" 
                   className="rounded-lg shadow-lg w-full"
               />
           </div>
