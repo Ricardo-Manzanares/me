@@ -11,7 +11,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:GitHubPage": "npm run build && shx rm -rf docs && shx mkdir docs && shx cp -r build/* docs/",
+    "deploy:GitHubPage": "npm run build:docs && git add docs && git commit -m \"Deploy docs\" && git push"
   },
   "eslintConfig": {
     "extends": [
@@ -32,6 +34,7 @@
     ]
   },
   "devDependencies": {
+    "shx": "^0.4.0",
     "tailwindcss": "^3.3.3"
   }
 }
