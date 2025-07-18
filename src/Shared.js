@@ -33,6 +33,13 @@ export const projects = [
     tags: ["Microsoft", "PowerPlatform", "Flows", "Dataverse", "PowerAutomate", "Automation","PCF"],
   },
   {
+    title: "VesselMap PCF Control",
+    description: "The control is designed to display vessel locations and ports on a map, with various functionalities such as filtering, clustering, and displaying additional information about each vessel.",
+    image: "VesselMap_PCF.png",
+    link: "https://github.com/Ricardo-Manzanares/PCF-Azure-Maps",
+    tags: ["Microsoft", "Developers","PCF", "AzureMaps", "PowerPlatform", "Dynamics365"],
+  },
+  {
     title: "Transfer RTM forms between environments",
     description: "This tool facilitates the migration of Dynamics 365 Marketing Real Time forms between different environments, making the process simpler and more efficient.",
     image: "Transfer_RTM Forms_between Environments_v1.png",
