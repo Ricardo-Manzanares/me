@@ -31,12 +31,9 @@ const Contact = () => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    event_type: 'contact_form_submission',
-                    client_payload: {
-                        name: formData.name,
-                        email: formData.email,
-                        userRequest: formData.message
-                    }
+                    name: formData.name,
+                    email: formData.email,
+                    userRequest: formData.message
                 })
             });
 
