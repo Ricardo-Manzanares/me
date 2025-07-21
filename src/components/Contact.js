@@ -1,6 +1,7 @@
 
 
 import { useState } from 'react';
+import {LeminCroppedCaptchaContainer} from "@leminnow/react-lemin-cropped-captcha";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -109,6 +110,9 @@ const Contact = () => {
                             className="w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-400" 
                             placeholder="Your Message"
                         ></textarea>
+                    </div>
+                    <div className="mt-6 text-dark">
+                        <LeminCroppedCaptchaContainer containerId="portFolioCaptcha" captchaId={"CROPPED_23307d5_36d052294e1742878a95e6667305813a"}/>
                     </div>
                     <div className="mt-8 text-center">
                         <button 

@@ -25,8 +25,6 @@ export default function App() {
     setTimeout(() => {
       setCurrentPage(page);
       setIsAnimating(false);
-      // Reset scroll to top when changing pages
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 300); // Match CSS transition duration
   };
 
