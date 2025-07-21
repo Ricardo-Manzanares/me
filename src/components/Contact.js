@@ -1,7 +1,10 @@
 
 
 import { useState } from 'react';
-import {LeminCroppedCaptchaContainer} from "@leminnow/react-lemin-cropped-captcha";
+import {LeminCroppedCaptchaContainer, leminCroppedCaptcha} from "@leminnow/react-lemin-cropped-captcha";
+
+const captchaContainerId = "portFolioCaptcha";
+const captchaId = "CROPPED_23307d5_36d052294e1742878a95e6667305813a";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -21,6 +24,15 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        const captchaValue = leminCroppedCaptcha.getCaptcha(captchaId).getCaptchaValue();
+
+        if (!captchaValue.answer || !captchaValue.challenge_id){
+            // If captcha is not valid, proceed with form submission
+            setSubmitStatus('errorCaptcha');
+            return;
+        }
+
         setIsSubmitting(true);
         setSubmitStatus(null);
 
@@ -71,6 +83,11 @@ const Contact = () => {
                         Sorry, there was an error sending your message. Please try again.
                     </div>
                 )}
+                 {submitStatus === 'errorCaptcha' && (
+                    <div className="mb-6 p-4 bg-red-600 text-white rounded-md">
+                        Sorry, there was an error with the captcha. Please try again.
+                    </div>
+                )}
                 
                 <form onSubmit={handleSubmit}>
                     <div className="grid md:grid-cols-2 gap-6">
@@ -112,7 +129,7 @@ const Contact = () => {
                         ></textarea>
                     </div>
                     <div className="mt-6 text-dark">
-                        <LeminCroppedCaptchaContainer containerId="portFolioCaptcha" captchaId={"CROPPED_23307d5_36d052294e1742878a95e6667305813a"}/>
+                        <LeminCroppedCaptchaContainer containerId="portFolioCaptcha" captchaId="CROPPED_23307d5_36d052294e1742878a95e6667305813a"/>
                     </div>
                     <div className="mt-8 text-center">
                         <button 
