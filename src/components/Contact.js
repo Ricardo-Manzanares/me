@@ -70,8 +70,7 @@ const Contact = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">
                 Contact <span className="text-blue-400">Me</span>
             </h2>
-            <p className="text-center text-gray-400 mb-12">Get in touch, let's talk!</p>
-            
+            <p className="text-center text-gray-400 mb-12">Get in touch, let's talk!</p>            
             <div className="bg-gray-800 p-8 rounded-lg shadow-lg">
                 {submitStatus === 'success' && (
                     <div className="mb-6 p-4 bg-green-600 text-white rounded-md">
@@ -87,8 +86,7 @@ const Contact = () => {
                     <div className="mb-6 p-4 bg-red-600 text-white rounded-md">
                         Sorry, there was an error with the captcha. Please try again.
                     </div>
-                )}
-                
+                )}                
                 <form onSubmit={handleSubmit}>
                     <div className="grid md:grid-cols-2 gap-6">
                         <div>
