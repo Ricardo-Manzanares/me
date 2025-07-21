@@ -26,7 +26,6 @@ const Contact = () => {
         e.preventDefault();
 
         const captchaValue = leminCroppedCaptcha.getCaptcha(captchaId).getCaptchaValue();
-
         if (!captchaValue.answer || !captchaValue.challenge_id){
             // If captcha is not valid, proceed with form submission
             setSubmitStatus('errorCaptcha');
